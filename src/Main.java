@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         DateTime dt = new DateTime();
@@ -7,5 +10,10 @@ public class Main {
         System.out.println();
         System.out.println(dt.getTimeOfDay());
         System.out.println(dt.getMonth());
+
+        Savefile savefile = new Savefile();
+        savefile.save("savefile.txt");
     }
+
+
 }

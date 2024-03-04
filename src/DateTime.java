@@ -4,13 +4,14 @@ public class DateTime {
     // user defined accuracy viewing
 
     // save file, saves accuracy and time
+    // set defaults int values of 0
 
     String[] months = {"Hammer (\"Deepwinter\")","Alturiak (\"The Claw of Winter\")","Ches (\"The Claw of Sunsets\")","Tarsakh (\"The Claw of Storms\")","Mirtul (\"The Melting\")","Kythorn (\"The Time of Flowers\")","Flamerule (\"Summertide\")","Eleasis (\"Highsun\")","Eleint (\"The Fading\")","Marpenoth (\"Leaffall\")","Uktar (\"The Rotting\")","Nightal (\"The Drawing Down\")\n"};
 
     String[] timeOfDay = {"Midnight","Moondark","Night's end","Dawn","Morning","Noon","Afternoon","Dusk","Sunset","Evening"};
     int[] hourMarks = {0,1,5,6,7,12,13,17,18,19};
 
-    int year, month, day, hour, minute, second;
+    int year, month, day, hour, minute, second = 0;
 
     public int[] getTime() {
         return new int[] {year,month,day,hour,minute,second};
