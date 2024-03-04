@@ -12,7 +12,7 @@ public class Main {
         System.out.println(dt.getMonth());
 
         Savefile savefile = new Savefile();
-        savefile.save("savefile.txt");
+        savefile.save("savefile.txt", dt);
     }
 
 

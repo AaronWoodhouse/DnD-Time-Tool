@@ -4,15 +4,18 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Savefile {
-    public void save(String filename) {
+    public void save(String filename, DateTime dt) {
         try {
-            File file = new File(filename);
+            File file = new File(filename); // Previously deleted file can reappear
             FileWriter writer = new FileWriter(filename);
             Scanner scanner = new Scanner(System.in);
 
             if (file.createNewFile()) {
                 System.out.println("File Created: " + file.getName());
-                writer.write("flag1");
+                for (int x : dt.getTime()) {
+                    writer.write(Integer.toString(x) + "\n");
+                }
+
                 System.out.println("Saved!");
 
             } else {
@@ -21,7 +24,9 @@ public class Savefile {
                 String input = scanner.nextLine();
 
                 if (input.equals("Y") || input.equals("y")) {
-                    writer.write("flag2");
+                    for (int x : dt.getTime()) {
+                        writer.write(Integer.toString(x) + "\n");
+                    }
                     System.out.println("Saved!");
                 }
 
