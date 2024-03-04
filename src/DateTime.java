@@ -1,6 +1,9 @@
 public class DateTime {
 
     // NOT USING HARPTOS EXTRA 5 DAYS
+    // user defined accuracy viewing
+
+    // save file, saves accuracy and time
 
     String[] months = {"Hammer (\"Deepwinter\")","Alturiak (\"The Claw of Winter\")","Ches (\"The Claw of Sunsets\")","Tarsakh (\"The Claw of Storms\")","Mirtul (\"The Melting\")","Kythorn (\"The Time of Flowers\")","Flamerule (\"Summertide\")","Eleasis (\"Highsun\")","Eleint (\"The Fading\")","Marpenoth (\"Leaffall\")","Uktar (\"The Rotting\")","Nightal (\"The Drawing Down\")\n"};
 
