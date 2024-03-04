@@ -41,7 +41,25 @@ public class Savefile {
         }
     }
 
-    public void load() {
+    public static DateTime load(String filename) {
+        int[] data = new int[6];
+        try {
+            File file = new File(filename);
+            Scanner reader = new Scanner(file);
+            int c = 0;
+            while (reader.hasNextLine()) {
+                data[c] = Integer.parseInt(reader.nextLine());
+                c++;
+            }
 
+        } catch (IOException e) {
+            System.out.println("Error.");
+            e.printStackTrace();
+        }
+
+        DateTime dt = new DateTime();
+        dt.setTime(data);
+        System.out.println("Loaded!");
+        return dt;
     }
 }

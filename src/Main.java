@@ -11,8 +11,12 @@ public class Main {
         System.out.println(dt.getTimeOfDay());
         System.out.println(dt.getMonth());
 
+        DateTime dt2 = new DateTime();
         Savefile savefile = new Savefile();
-        savefile.save("savefile.txt", dt);
+        //savefile.save("savefile.txt", dt);
+        dt2 = Savefile.load("savefile.txt");
+        dt2.printTime();
+
     }
 
 
