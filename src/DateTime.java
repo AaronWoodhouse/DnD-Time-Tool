@@ -40,6 +40,11 @@ public class DateTime {
     }
 
     public void setTime(int[] args) {
+
+        if (args.length != 6) {
+            throw new IllegalArgumentException("Must be in the form of y,m,d,h,m,s");
+        }
+
         year = args[0];
         month = args[1];
         day = args[2];
@@ -48,6 +53,7 @@ public class DateTime {
         second = args[5];
     }
 
+    //y,m,d,h,m,s
     public void addTime(int[] args) {
 
         year += args[0];

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Savefile {
     public void save(String filename, DateTime dt) {
         try {
-            File file = new File(filename); // Previously deleted file can reappear
+            File file = new File(filename); // BUG: Previously deleted file can reappear
             FileWriter writer = new FileWriter(filename);
             Scanner scanner = new Scanner(System.in);
 
