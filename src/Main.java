@@ -4,6 +4,9 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
 
+        DateTime currentTime;
+        Savefile savefile;
+
         // Get starting time
         // New file or load?
         // set start time
@@ -18,7 +21,7 @@ public class Main {
         System.out.println(dt.getMonth());
 
         DateTime dt2 = new DateTime();
-        Savefile savefile = new Savefile();
+        savefile = new Savefile();
         //savefile.save("savefile.txt", dt);
         dt2 = Savefile.load("savefile.txt");
         dt2.printTime();

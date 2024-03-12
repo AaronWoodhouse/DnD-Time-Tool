@@ -19,6 +19,8 @@ public class DateTime {
 
     public void printTime() {
         System.out.printf("%sy-%sm-%sd-%sh-%sm-%ss",year,month,day,hour,minute,second);
+        System.out.printf(getMonth() + ", %sd", day);
+        System.out.println(getTimeOfDay());
         // 1202y-12m-10d-5m-54s
     }
 
