@@ -94,4 +94,42 @@ public class DateTime {
 
     }
 
+    public void subtractTime(int[] args) {
+
+        year -= args[0];
+        month -= args[1];
+        day -= args[2];
+        hour -= args[3];
+        minute -= args[4];
+        second -= args[5];
+
+        while (second < 0) {
+            minute -= 1;
+            second += 60;
+        }
+
+        while (minute < 0) {
+            hour -= 1;
+            minute += 60;
+        }
+
+        while (hour < 0) {
+            day -= 1;
+            hour += 24;
+        }
+
+        while (day < 0) {
+            month -= 1;
+            day += 30;
+        }
+
+        while (month < 0) {
+            year -= 1;
+            month += 12;
+        }
+
+
+
+    }
+
 }

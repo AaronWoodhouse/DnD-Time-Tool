@@ -1,3 +1,4 @@
+import java.awt.desktop.SystemSleepEvent;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -23,6 +24,9 @@ public class Console {
 
         switch (Integer.parseInt(input)) {
             case 1:
+                String inputTime = getInput();
+                int[] time = parseTime(inputTime);
+                setTime(dt, time);
                 newFile(dt);
                 mainScreen();
                 break;
@@ -44,6 +48,18 @@ public class Console {
     public void mainScreen() {
         displayTime(dt);
         getAction();
+    }
+
+    private String getInput() {
+        Scanner input = new Scanner(System.in);
+        return input.nextLine();
+    }
+
+    private int[] parseTime(String inputTime) {
+        String[] splitInput = inputTime.split(",");
+
+
+        return 0;
     }
 
     public void displayTime(DateTime dt) {
@@ -78,12 +94,18 @@ public class Console {
         }
     }
 
+    public void setTime(DateTime dt, int[] vals) {
+        System.out.println("What is the current time?");
+        String input = scanner.nextLine();
+        // input validation
+        dt.setTime(vals);
+    }
+
     public void newFile(DateTime dt) {
         Savefile savefile = new Savefile();
         System.out.print("Save new file as: ");
         String filename = scanner.nextLine();
         // filename validation
-        savefile.save(filename, dt);
     }
 
     public void loadFile(DateTime dt) {
