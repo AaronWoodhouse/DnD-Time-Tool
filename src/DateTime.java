@@ -65,32 +65,20 @@ public class DateTime {
         minute += args[4];
         second += args[5];
 
-        while (second >= 60) {
-            minute += 1;
-            second -= 60;
-        }
+        minute += second / 60;
+        second = second % 60;
 
-        while (minute >= 60) {
-            hour += 1;
-            minute -= 60;
-        }
+        hour += minute / 60;
+        minute = minute % 60;
 
-        while (hour >= 24) {
-            day += 1;
-            hour -= 24;
-        }
+        day += hour / 24;
+        hour = hour % 24;
 
-        while (day >= 30) {
-            month += 1;
-            day -= 30;
-        }
+        month += day / 30;
+        day = day % 30;
 
-        while (month >= 12) {
-            year += 1;
-            month -= 12;
-        }
-
-
+        year += month / 12;
+        month = month % 12;
 
     }
 
@@ -103,32 +91,21 @@ public class DateTime {
         minute -= args[4];
         second -= args[5];
 
-        while (second < 0) {
-            minute -= 1;
-            second += 60;
-        }
 
-        while (minute < 0) {
-            hour -= 1;
-            minute += 60;
-        }
+        minute += (int) Math.floor((double) second / 60);
+        second = second % 60;
 
-        while (hour < 0) {
-            day -= 1;
-            hour += 24;
-        }
+        hour += (int) Math.floor((double) minute / 60);
+        minute = minute % 60;
 
-        while (day < 0) {
-            month -= 1;
-            day += 30;
-        }
+        day += (int) Math.floor((double) hour / 24);
+        hour = hour % 24;
 
-        while (month < 0) {
-            year -= 1;
-            month += 12;
-        }
+        month += (int) Math.floor((double) day / 30);
+        day = day % 30;
 
-
+        year += (int) Math.floor((double) month / 12);
+        month = month % 12;
 
     }
 
