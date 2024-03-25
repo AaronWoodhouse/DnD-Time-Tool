@@ -41,7 +41,7 @@ public class Console {
     }
 
     public void mainScreen() {
-        displayTime(dt);
+        displayTime();
         getAction();
     }
 
