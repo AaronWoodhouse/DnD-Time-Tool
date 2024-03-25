@@ -7,11 +7,6 @@ public class Console {
     Scanner scanner = new Scanner(System.in);
     String input;
 
-    // Get starting time
-    // New file or load?
-    // set start time
-    // display time and available actions
-
     public void mainMenu(DateTime dt) {
         System.out.println("=== Harptos Time Tool ===");
         System.out.println("[1] Create New File");
@@ -20,7 +15,7 @@ public class Console {
         System.out.print("Selection: ");
         input = scanner.nextLine();
 
-        //input validation
+        // TODO: input validation
 
         switch (Integer.parseInt(input)) {
             case 1:

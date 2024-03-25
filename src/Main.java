@@ -22,7 +22,7 @@ public class Main {
 
 
 
-
+/*
         DateTime dt = new DateTime();
         dt.setTime(new int[] {1202,10,3,16,24,46});
         dt.addTime(new int[] {1,0,0,8,24,46});
@@ -36,7 +36,7 @@ public class Main {
         //savefile.save("savefile.txt", dt);
         dt2 = Savefile.load("savefile.txt");
         dt2.printTime();
-
+*/
     }
 
 
